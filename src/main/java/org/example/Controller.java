@@ -1,8 +1,6 @@
 package org.example;
 
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 
 import java.text.SimpleDateFormat;
@@ -39,6 +37,12 @@ public class Controller {
     public String getMorning2(@PathVariable String username){
         return "<h1 style=\"text-align:center;\" >Good Morning</h1> " +
                 "<p style=\"text-align:center;\"> " +username+" </p>";
+    }
+
+    @RequestMapping(path = "/myfirstpage/postik", method = RequestMethod.POST)
+    public String postMorning3(@RequestBody String name){
+        return "<h1 style=\"text-align:center;\" >Good Morning</h1> " +
+                "<p style=\"text-align:center;\"> " +name+" </p>";
     }
 
 }
