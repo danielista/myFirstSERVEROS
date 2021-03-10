@@ -39,10 +39,13 @@ public class Controller {
                 "<p style=\"text-align:center;\"> " +username+" </p>";
     }
 
+
+
     @RequestMapping(path = "/myfirstpage/postik", method = RequestMethod.POST)
     public String postMorning3(@RequestBody String name){
         return "<h1 style=\"text-align:center;\" >Good Morning</h1> " +
                 "<p style=\"text-align:center;\"> " +name+" </p>";
     }
+
 
 }
